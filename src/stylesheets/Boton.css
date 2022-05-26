@@ -1,0 +1,30 @@
+@import url('../App.css');
+
+.boton-container{
+  height: 83px;
+  display: flex;
+  flex: 1 1;/* esto hace que todos los elementos distribuyan las dimensiones horizontal y verticalmente */
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 38px;
+  background-color: var(--color-bk);
+  color: var(--color-oscuro);
+  border-radius: 2.5px;
+  margin: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .05s ease-in;
+}
+
+.boton-container:hover{
+  background-color: var(--color-gris);
+}
+
+.operador{
+  background-color: var(--color-amarillo);
+}
+
+.operador:hover{
+  background-color: var(--color-mostaza);
+}
