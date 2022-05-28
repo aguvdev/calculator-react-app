@@ -40,11 +40,11 @@
 
 .logo-title{
   color: var(--color-oscuro);
+  user-select: none;
 }
 
 .calculator-container{
   width: 400px;
-  height: 600px;
   padding: 14px;
   background-color: var(--color-oscuro);
   border-radius: 5px;
