@@ -10,7 +10,9 @@ function Button(props) {
 
   return (
     <div
-        className={`boton-container ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()}>{/* trimEnd te permite borrar espacios al final de una cadena de caracteres */}
+        className={`boton-container ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()}
+        onClick={() => props.manejarClick(props.children)}>
+          {/* trimEnd te permite borrar espacios al final de una cadena de caracteres */}
       {props.children}
     </div>
   );
