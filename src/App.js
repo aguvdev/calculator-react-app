@@ -1,8 +1,20 @@
 import './App.css';
 import logo from './img/Calculator_icon.png';
 import Boton from './components/Boton';
+import Pantalla from './components/Pantalla';
+import BotonClear from './components/BotonClear';
+import { useState } from 'react';
 
 function App() {
+
+
+  const [input, setInput] = useState('');
+
+  const agregarInput = val => {
+    setInput(input + val);
+  };
+
+
   return (
     <div className="App">
 
@@ -17,31 +29,37 @@ function App() {
         
       {/* Contenedor principal */}
       <div className='calculator-container'>
+        {/* Pantalla */}
+        <Pantalla input={input} />
+
+        {/* Botones */}
         <div className='column'>
-          <Boton>7</Boton>
-          <Boton>8</Boton>
-          <Boton>9</Boton>
-          <Boton>*</Boton>
+          <Boton manejarClick={agregarInput}>7</Boton>
+          <Boton manejarClick={agregarInput}>8</Boton>
+          <Boton manejarClick={agregarInput}>9</Boton>
+          <Boton manejarClick={agregarInput}>*</Boton>
         </div>
         <div className='column'>
-          <Boton>4</Boton>
-          <Boton>5</Boton>
-          <Boton>6</Boton>
-          <Boton>/</Boton>
+          <Boton manejarClick={agregarInput}>4</Boton>
+          <Boton manejarClick={agregarInput}>5</Boton>
+          <Boton manejarClick={agregarInput}>6</Boton>
+          <Boton manejarClick={agregarInput}>/</Boton>
         </div>
         <div className='column'>
-          <Boton>1</Boton>
-          <Boton>2</Boton>
-          <Boton>3</Boton>
-          <Boton>+</Boton>
+          <Boton manejarClick={agregarInput}>1</Boton>
+          <Boton manejarClick={agregarInput}>2</Boton>
+          <Boton manejarClick={agregarInput}>3</Boton>
+          <Boton manejarClick={agregarInput}>+</Boton>
         </div>
         <div className='column'>
-          <Boton>0</Boton>
-          <Boton>.</Boton>
-          <Boton>=</Boton>
-          <Boton>-</Boton>
+          <Boton manejarClick={agregarInput}>0</Boton>
+          <Boton manejarClick={agregarInput}>.</Boton>
+          <Boton manejarClick={agregarInput}>=</Boton>
+          <Boton manejarClick={agregarInput}>-</Boton>
         </div>
-        <div className='column'></div>
+        <div className='column'>
+          <BotonClear>Clear</BotonClear>
+        </div>
       </div>
 
     </div>
