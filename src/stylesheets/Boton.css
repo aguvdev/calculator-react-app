@@ -28,3 +28,9 @@
 .operador:hover{
   background-color: var(--color-mostaza);
 }
+
+@media screen and (max-width: 320px) {
+  .boton-container{
+    height: 50px;
+  }
+}
